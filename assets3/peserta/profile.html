@@ -1,0 +1,196 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no" />
+    <meta name="description" content="" />
+    <meta name="author" content="" />
+    <title>Dashboard Peserta | BBMK 2021</title>
+    <!-- Favicon-->
+    <link rel="icon" type="image/x-icon" href="../assets/img/logo-icon.jpg" />
+    <!-- Core theme CSS (includes Bootstrap)-->
+    <link rel="stylesheet" href="https://unicons.iconscout.com/release/v4.0.0/css/line.css" />
+    <link href="css/styles.css" rel="stylesheet" />
+    <link rel="stylesheet" href="../assets/css/style.css" />
+  </head>
+  <body>
+    <div class="d-flex " id="wrapper">
+      <!-- Sidebar-->
+      <div class="border-end flex-nowrap d-inline-block sidebar-dashboard" id="sidebar-wrapper">
+        <div class="sidebar-heading border-bottom sidebar-head-text">Dashboard peserta</div>
+        <div class="list-group list-group-flush list-group-color">
+          <a class="list-group-item list-group-item-action list-group-item-dark p-2 ps-3" href="#!"><i class="uil uil-estate icon-dashboard"></i>&emsp;Beranda</a>
+          <a class="list-group-item list-group-item-action list-group-item-dark p-2 ps-3 disabled active-db" href="profile.html"><i class="uil uil-edit icon-dashboard"></i>&emsp;Edit Profile</a>
+          <a class="list-group-item list-group-item-action list-group-item-dark p-2 ps-3" href="pilih-ukm.html"><i class="uil uil-users-alt icon-dashboard"></i>&emsp;Pilih UKM</a>
+          <a class="list-group-item list-group-item-action list-group-item-dark p-2 ps-3" href="syarat-peserta.html"><i class="uil uil-exclamation-triangle icon-dashboard"></i>&emsp;Syarat Daftar Ulang</a>
+          <a class="list-group-item list-group-item-action list-group-item-dark p-2 ps-3" href="status-peserta.html"><i class="uil uil-inbox icon-dashboard"></i>&emsp;Status verifikasi</a>
+          <a class="list-group-item list-group-item-action list-group-item-dark p-2 ps-3" href="jadwal.html"><i class="uil uil-schedule icon-dashboard"></i>&emsp;Jadwal BBMK</a>
+          <a class="list-group-item list-group-item-action list-group-item-dark p-2 ps-3" href="materi-peserta.html"><i class="uil uil-diary-alt icon-dashboard"></i>&emsp;Materi BBMK</a>
+          <a class="list-group-item list-group-item-action list-group-item-dark p-2 ps-3" href="#!"><i class="uil uil-signin icon-dashboard"></i>&emsp;Keluar</a>
+        </div>
+      </div>
+      <!-- Page content wrapper-->
+      <div id="page-content-wrapper">
+        <!-- Top navigation-->
+        <nav class="navbar navbar-expand-lg navbar-light navbar-dashboard">
+          <div class="container-fluid">
+            <button class="btn btn-dashboard" id="sidebarToggle"><i class="uil uil-edit icon-navbar"></i>&ensp; Edit Profile</button>
+            <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+              <span class="navbar-toggler-icon"></span>
+            </button>
+            <div class="collapse navbar-collapse" id="navbarSupportedContent">
+              <ul class="navbar-nav ms-auto mt-2 mt-lg-0">
+                <li class="nav-item dropdown">
+                  <a class="nav-link dropdown-toggle" id="navbarDropdown" href="#" role="button" data-bs-toggle="dropdown" aria-haspopup="true" aria-expanded="false">Najwa Syiba Hansyaf</a>
+                  <div class="dropdown-menu dropdown-menu-dash dropdown-menu-end" aria-labelledby="navbarDropdown">
+                    <a class="dropdown-item dropdown-item-dash" href="#!"><i class="uil uil-signin"></i>&ensp;Keluar</a>
+                  </div>
+                </li>
+              </ul>
+            </div>
+          </div>
+        </nav>
+
+        <!-- ===== PAGE CONTENT ===== -->
+        <img src="../assets/img/bg.png" alt="" class="bg-content">
+        <div class="container-fluid">
+        <div class="col-md-6 offset-md-3 form-regis text-center edit-profile">
+          <div class="">
+            <form class="mt-4">
+                <div class="d-flex justify-content-center">
+                  <div class="profile-photo mt-3">
+                    <img src="../assets/img/unand.png" alt="Profile Photo" width="200" class="rounded-circle img-thumbnail" />
+                    <div class="input-group mb-2">
+                      <input type="file" class="form-control photo-upload" id="inputGroupFile01">
+                    </div>
+                  </div>
+                </div>
+            </form>
+          </div>
+          <form action="" method="">
+            <div class="form-floating mb-2 mt-3">
+              <input type="text" class="form-control" id="inputName" placeholder="Nama Lengkap" />
+              <label for="inputName" class="form-label form-label-edit">Nama Lengkap</label>
+            </div>
+            <div class="form-floating mb-2">
+              <input type="number" class="form-control form-control-sm" id="floatingInput" placeholder="NIM" />
+              <label for="floatingInput" class="form-label form-label-edit">NIM</label>
+            </div>
+            <div class="form-floating mb-2 option-menu">
+              <select class="form-select form-control " id="floatingSelect" aria-label="Floating label select example">
+                  <option selected>Pilih Fakultas</option>
+                  <option value="1">Ekonomi</option>
+                  <option value="2">Farmasi</option>
+                  <option value="3">Hukum</option>
+                  <option value="4">Ilmu Budaya</option>
+                  <option value="5">Ilmu Sosial dan Ilmu Politik</option>
+                  <option value="6">Kedokteran</option>
+                  <option value="7">Kedokteran Gigi</option>
+                  <option value="8">Keperawatan</option>
+                  <option value="9">Kesehatan Masyarakat</option>
+                  <option value="10">Pertanian</option>
+                  <option value="11">Peternakan</option>
+                  <option value="12">Teknik</option>
+                  <option value="13">Teknologi Pertanian</option>
+                  <option value="14">Matematika dan Ilmu Pengetahuan Alam</option>
+                  <option value="15">Teknologi Informasi</option>
+              </select>
+              <label for="floatingSelect">Fakultas</label>
+            </div>
+            <div class="form-floating mb-2">
+              <select class="form-select form-control" id="floatingSelect" aria-label="Floating label select example">
+                  <option selected>Pilih Jurusan</option>
+                  <option selected>Jurusan</option>
+                  <option value="1">Manajemen</option>
+                  <option value="2">Ilmu Ekonomi</option>
+                  <option value="3">Akuntansi</option>
+                  <option value="4">Farmasi</option>
+                  <option value="5">Sejarah</option>
+                  <option value="6">Sastra Indonesia</option>
+                  <option value="7">Sastra Inggris</option>
+                  <option value="8">Sastra Jepang</option>
+                  <option value="9">Sastra Minang</option>
+                  <option value="10">Ilmu Komunikasi</option>
+                  <option value="11">Sosiologi</option>
+                  <option value="12">Antropologi</option>
+                  <option value="13">Ilmu Politik</option>
+                  <option value="14">Hubungan Internasional</option>
+                  <option value="15">Administrasi Publik</option>
+                  <option value="16">Kebidanan</option>
+                  <option value="17">Pendidikan Dokter</option>
+                  <option value="18">Psikologi</option>
+                  <option value="19">Teknik Biomedis</option>
+                  <option value="20">Pendidikan Dokter Gigi</option>
+                  <option value="21">Ilmu Keperawatan</option>
+                  <option value="22">Imu Kesehatan Masyarakat</option>
+                  <option value="23">Gizi</option>
+                  <option value="23">Ilmu dan Teknologi Pangan</option>
+                  <option value="23">Ilmu Tanah</option>
+                  <option value="23">Agribisnis</option>
+                  <option value="23">Agroteknologi</option>
+                  <option value="23">Penyuluhan dan Komunikasi Pertanian</option>
+                  <option value="23">Proteksi Tanaman</option>
+                  <option value="23">Peternakan</option>
+                  <option value="23">Teknik Lingkungan</option>
+                  <option value="23">Teknik Mesin</option>
+                  <option value="23">Teknik Sipil</option>
+                  <option value="23">Teknik Industri</option>
+                  <option value="23">Teknik Elektro</option>
+                  <option value="23">Teknik Pertanian</option>
+                  <option value="23">Fisika</option>
+                  <option value="23">Kimia</option>
+                  <option value="23">Biologi</option>
+                  <option value="23">Matematika</option>
+                  <option value="23">Teknik Komputer</option>
+                  <option value="23">Sistem Informasi</option>
+                  <label for="floatingSelect">Fakultas</label>
+              </select>
+              <label for="floatingSelect">Jurusan</label>
+            </div>
+            <div class="form-floating mb-2">
+              <input type="text" class="form-control" id="inputTempat" placeholder="Tempat Lahir" />
+              <label for="inputTempat" class="form-label form-label-edit">Tempat Lahir</label>
+            </div>
+            <div class="form-floating mb-2">
+              <input type="date" class="form-control form-control-sm" id="floatingInput" placeholder="Tanggal Lahir" />
+              <label for="floatingInput" class="form-label form-label-edit">Tanggal Lahir</label>
+            </div>
+            <div class="form-floating mb-2">
+              <input type="text" class="form-control" id="inputAgama" placeholder="Tempat Lahir" />
+              <label for="inputAgama" class="form-label form-label-edit">Agama</label>
+            </div>
+            <div class="form-floating mb-2">
+              <input type="text" class="form-control" id="inputCita" placeholder="Cita-cita" />
+              <label for="inputCita" class="form-label form-label-edit">Cita-cita</label>
+            </div>
+            <div class="form-floating mb-2">
+              <input type="text" class="form-control" id="inputHobi" placeholder="Hobi" />
+              <label for="inputHobi" class="form-label form-label-edit">Hobi</label>
+            </div>
+            <div class="form-floating mb-2">
+              <input type="text" class="form-control" id="inputMotto" placeholder="Motto" />
+              <label for="inputMotto" class="form-label form-label-edit">Motto</label>
+            </div>
+            <div class="form-floating mb-2">
+              <input type="number" class="form-control form-control-sm" id="floatingInput" placeholder="No. HP" />
+              <label for="floatingInput" class="form-label form-label-edit">No. HP</label>
+            </div>
+            <div class="form-floating mb-2">
+              <input type="text" class="form-control" id="inputAlamat" placeholder="Alamat" />
+              <label for="inputAlamat" class="form-label form-label-edit">Alamat</label>
+            </div>
+            <div class="form-floating mb-2">
+              <input type="text" class="form-control" id="inputPrestasi" placeholder="Prestasi" />
+              <label for="inputPrestasi" class="form-label form-label-edit">Prestasi</label>
+            </div>
+            <button type="submit" class="btn btnForm btnForm-edit mt-5 mb-5"><a href="">Update</a></button>
+          </form>
+        </div>
+      </div>
+    </div>
+    <!-- Bootstrap core JS-->
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.1.1/dist/js/bootstrap.bundle.min.js"></script>
+    <!-- Core theme JS-->
+    <script src="js/scripts.js"></script>
+  </body>
+</html>

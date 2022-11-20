@@ -1,0 +1,221 @@
+
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@300&display=swap');
+.login {
+    border-radius: 20px;
+    background-color:#48CAE4;
+}
+.btn-ukm {
+    border-radius: 20px;
+    background-color: #003566;
+}
+.navbar {
+    background-color:#003566;
+}
+.nav-link, .navbar-brand {
+    color: #fff!important;
+}
+.dropdown-menu {
+    background-color:#48CAE4!important;
+}
+.dropdown-item {
+    color: #fff!important;
+    text-align: center;
+}
+.dropdown-item:hover {
+    color: #fff!important;
+    background-color: #003566!important;
+    border-radius: 20px;
+    transition: .5s;
+}
+.title {
+    background-color: #003566;
+    height: 350px;
+}
+h1 {
+    font-family: 'Poppins', sans-serif;
+    font-size: 100px;
+    color: #f0d227;
+    font-weight: 700;
+    letter-spacing: 10px;
+}
+.page-login {
+    background-color: #003566;
+    height: 200px;
+}
+.btn-login {
+    background: #48CAE4;
+    border: none;
+    border-radius: 20px;
+    display: block;
+    width: 100%;
+    height: 50px;
+}
+.daftar-akun {
+    background: none;
+}
+.log-reg {
+    background: none;
+    margin-top: 100px;
+}
+option {
+    background: #CAF0F8;
+}
+.bi-eye-fill, .bi-eye-slash-fill {
+    font-size: 35px;
+}
+.form-control {
+    height: 50px;
+    border-radius: 20px;
+}
+.masuk {
+    background-color: #caf0f8;
+    margin-top: 100px;
+    border-radius: 25px;
+}
+.tahun {
+    color: #caf0f8!important;
+}
+.card {
+    border: none;
+}
+.intro {
+    font-family: 'Poppins', sans-serif;
+    font-weight: 700;
+    font-size: 40px;
+    color: #003566;
+}
+.bakat {
+    font-family: 'Poppins', sans-serif;
+    font-weight: bold;
+    font-size: 40px;
+    color: #f0d228;
+}
+.timeline {
+    position: relative;
+    max-width: 1200px;
+    margin: 0 auto;
+}
+.timeline::after {
+    content: "";
+    position: absolute;
+    width: 5px;
+    background-color: black;
+    top: 0;
+    bottom: 0;
+    left: 50%;
+    margin-left: -3px;
+}
+.container1 {
+    padding: 10px 40px;
+    position: relative;
+    background-color: inherit;
+    width: 50%;
+}
+.container1::after {
+    content: "";
+    position: absolute;
+    width: 25px;
+    height: 25px;
+    right: -12px;
+    background-color: white;
+    border: 4px solid #ff9f55;
+    top: 15px;
+    border-radius: 50%;
+    z-index: 1;
+}
+.content {
+    padding: 20px 30px;
+    background-color: #48CAE4;
+    position: relative;
+    border-radius: 6px;
+    color: rgb(244, 244, 237);
+}
+.alur {
+    display: block;
+    margin: auto 0;
+}
+.alur1, .time1, .ukm1 {
+    font-family: 'Poppins', sans-serif;
+    font-weight: 700;
+    font-size: 40px;
+    color: #003566;
+}
+.alur2, .time2, .ukm2 {
+    font-family: 'Poppins', sans-serif;
+    font-weight: bold;
+    font-size: 40px;
+    color: #f0d228;
+}
+i {
+    font-size: 30px;
+}
+.ukm {
+    background-color: #f0d228;
+}
+.title-ukm {
+    color: #003566;
+    font-weight: bold;
+}
+.ukm img {
+    object-fit: contain;
+    align-self: center;
+    width: 200px;
+    height: 200px;
+}
+.footer {
+    background-color: #003566;
+    color: #fff;
+    width: 100%;
+}
+.text-footer {
+    font-size: 80px;
+    letter-spacing: 5px;
+    font-family: 'Poppins', sans-serif;
+}
+.year {
+    position: absolute;
+    left: 22%;
+    font-size: 20px;
+    margin-top: -10px;
+}
+@media screen AND (max-width: 678px) {
+    .logo {
+        display: block;
+        margin: 30px auto;
+    }
+    .content {
+        width: 200px;
+    }
+    .timeline::after {
+        left: 80%;
+    }
+    .container1::after {
+        right: -115px;
+    }
+    .d-flex {
+        display: block;
+        margin: 0 auto;
+    }
+    .text-footer {
+        font-size: 2rem;
+    }
+    .img-footer {
+        width: 50px;
+        height: 50px;
+    }
+    .d-flex {
+        display: flex;
+        align-items: center;
+        justify-content: center;
+    }
+    h5 {
+        margin: 50px 0 20px 0;
+
+    }
+    .kolaborasi {
+        text-align: center;
+    }
+    .masuk {
+        margin-top: 30px;
+    }
+}

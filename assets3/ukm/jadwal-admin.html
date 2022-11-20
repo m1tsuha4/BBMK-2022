@@ -1,0 +1,125 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no" />
+    <meta name="description" content="" />
+    <meta name="author" content="" />
+    <title>Dashboard Peserta | BBMK 2021</title>
+    <!-- Favicon-->
+    <link rel="icon" type="image/x-icon" href="../assets/img/logo-icon.jpg" />
+    <!-- Core theme CSS (includes Bootstrap)-->
+    <link rel="stylesheet" href="https://unicons.iconscout.com/release/v4.0.0/css/line.css" />
+    <link rel="stylesheet" href="https://unicons.iconscout.com/release/v4.0.0/css/solid.css" />
+    <link href="css/styles.css" rel="stylesheet" />
+    <link rel="stylesheet" href="../assets/css/style.css" />
+  </head>
+  <body>
+    <div class="d-flex" id="wrapper">
+      <!-- Sidebar-->
+      <div class="border-end flex-nowrap d-inline-block sidebar-dashboard" id="sidebar-wrapper">
+        <div class="sidebar-heading border-bottom sidebar-head-text">Dashboard UKM</div>
+        <div class="list-group list-group-flush list-group-color">
+          <a class="list-group-item list-group-item-action list-group-item-dark p-2 ps-3" href="ukm.html"><i class="uil uil-estate icon-dashboard"></i>&emsp;Beranda</a>
+          <a class="list-group-item list-group-item-action list-group-item-dark p-2 ps-3" href="profile-admin.html"><i class="uil uil-edit icon-dashboard"></i>&emsp;Edit Profile</a>
+          <a class="list-group-item list-group-item-action list-group-item-dark p-2 ps-3 disabled active-db" href="jadwal-admin.html"><i class="uil uil-schedule icon-dashboard"></i>&emsp;Jadwal BBMK</a>
+          <a class="list-group-item list-group-item-action list-group-item-dark p-2 ps-3" href="materi-admin.html"><i class="uil uil-diary-alt icon-dashboard"></i>&emsp;Materi BBMK</a>
+          <a class="list-group-item list-group-item-action list-group-item-dark p-2 ps-3" href="pemberitahuan.html"><i class="uil uil-chat-info icon-dashboard"></i></i>&emsp;Pemberitahuan</a>
+          <a class="list-group-item list-group-item-action list-group-item-dark p-2 ps-3" href="peserta-bbmk.html"><i class="uil uil-users-alt icon-dashboard"></i>&emsp;Semua Peserta BBMK</a>
+          <a class="list-group-item list-group-item-action list-group-item-dark p-2 ps-3" href="verifikasi.html"><i class="uil uil-comment-check icon-dashboard"></i>&emsp;Verifikasi Peserta</a>
+          <a class="list-group-item list-group-item-action list-group-item-dark p-2 ps-3" href="kehadiran.html"><i class="uil uil-user-exclamation icon-dashboard"></i>&emsp;Kehadiran BBMK</a>
+          <a class="list-group-item list-group-item-action list-group-item-dark p-2 ps-3" href="kelulusan.html"><i class="uil uil-user-check icon-dashboard"></i>&emsp;Kelulusan Peserta</a>
+          <a class="list-group-item list-group-item-action list-group-item-dark p-2 ps-3" href="sertifikat-admin.html"><i class="uil uil-files-landscapes-alt icon-dashboard"></i>&emsp; Sertifikat Peserta</a>
+          <a class="list-group-item list-group-item-action list-group-item-dark p-2 ps-3" href="../index.html"><i class="uil uil-signin icon-dashboard"></i>&emsp;Keluar</a>
+        </div>
+      </div>
+      <!-- Page content wrapper-->
+      <div id="page-content-wrapper">
+        <!-- Top navigation-->
+        <nav class="navbar navbar-expand-lg navbar-light navbar-dashboard">
+          <div class="container-fluid">
+            <button class="btn btn-dashboard" id="sidebarToggle"><i class="uil uil-schedule icon-navbar"></i>&ensp;Jadwal BBMK</button>
+            <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+              <span class="navbar-toggler-icon"></span>
+            </button>
+            <div class="collapse navbar-collapse" id="navbarSupportedContent">
+              <ul class="navbar-nav ms-auto mt-2 mt-lg-0">
+                <li class="nav-item dropdown">
+                  <a class="nav-link dropdown-toggle" id="navbarDropdown" href="#" role="button" data-bs-toggle="dropdown" aria-haspopup="true" aria-expanded="false">UKM Neo Telemetri</a>
+                  <div class="dropdown-menu dropdown-menu-dash" aria-labelledby="navbarDropdown">
+                    <a class="dropdown-item dropdown-item-dash" href="#!"><i class="uil uil-signin"></i>&ensp;Keluar</a>
+                  </div>
+                </li>
+              </ul>
+            </div>
+          </div>
+        </nav>
+
+        <!-- ===== PAGE CONTENT ===== -->
+        <img src="../assets/img/bg.png" alt="" class="bg-content" />
+        <div class="container-fluid">
+          <div class="col-6 mt-5 me-auto ms-auto text-center mb-5">
+            <form action="" method="">
+              <div class="row row-cols-2">
+                <div class="col cal-col">
+                  <img src="../assets/img/calendar.png" class="calender-icon" alt="" />
+                  <h3>Day 1</h3>
+                  <div class="input-group input-group-sm mb-3">
+                    <input type="text" class="form-control" aria-label="Sizing example input" aria-describedby="inputGroup-sizing-sm" placeholder="tanggal, bulan, tahun kegiatan" />
+                  </div>
+                  <div class="input-group input-group-sm mb-3">
+                    <input type="text" class="form-control" aria-label="Sizing example input" aria-describedby="inputGroup-sizing-sm" placeholder="nama kegiatan" />
+                  </div>
+                </div>
+                <div class="col cal-col">
+                  <img src="../assets/img/calendar.png" class="calender-icon" alt="" />
+                  <h3>Day 2</h3>
+                  <div class="input-group input-group-sm mb-3">
+                    <input type="text" class="form-control" aria-label="Sizing example input" aria-describedby="inputGroup-sizing-sm" placeholder="tanggal, bulan, tahun kegiatan" />
+                  </div>
+                  <div class="input-group input-group-sm mb-3">
+                    <input type="text" class="form-control" aria-label="Sizing example input" aria-describedby="inputGroup-sizing-sm" placeholder="nama kegiatan" />
+                  </div>
+                </div>
+                <div class="col cal-col">
+                  <img src="../assets/img/calendar.png" class="calender-icon" alt="" />
+                  <h3>Day 3</h3>
+                  <div class="input-group input-group-sm mb-3">
+                    <input type="text" class="form-control" aria-label="Sizing example input" aria-describedby="inputGroup-sizing-sm" placeholder="tanggal, bulan, tahun kegiatan" />
+                  </div>
+                  <div class="input-group input-group-sm mb-3">
+                    <input type="text" class="form-control" aria-label="Sizing example input" aria-describedby="inputGroup-sizing-sm" placeholder="nama kegiatan" />
+                  </div>
+                </div>
+                <div class="col cal-col">
+                  <img src="../assets/img/calendar.png" class="calender-icon" alt="" />
+                  <h3>Day 4</h3>
+                  <div class="input-group input-group-sm mb-3">
+                    <input type="text" class="form-control" aria-label="Sizing example input" aria-describedby="inputGroup-sizing-sm" placeholder="tanggal, bulan, tahun kegiatan" />
+                  </div>
+                  <div class="input-group input-group-sm mb-3">
+                    <input type="text" class="form-control" aria-label="Sizing example input" aria-describedby="inputGroup-sizing-sm" placeholder="nama kegiatan" />
+                  </div>
+                </div>
+                <div class="col cal-col mt-5" style="margin-left: auto; margin-right: auto">
+                  <p><b>Contoh Jadwal</b></p>
+                  <img src="../assets/img/calendar.png" class="calender-icon" alt="" />
+                  <h3>Day 1</h3>
+                  <h5>07 November 2021</h5>
+                  <p>Pembukaan BBMK UKM Neo Telemetri</p>
+                </div>
+              </div>
+              <button type="submit" class="btn btnForm btnForm-edit mt-5 mb-5">
+                <a href="">Kirim</a>
+              </button>
+            </form>
+          </div>
+        </div>
+      </div>
+    </div>
+    <!-- Bootstrap core JS-->
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.1.1/dist/js/bootstrap.bundle.min.js"></script>
+    <!-- Core theme JS-->
+    <script src="js/scripts.js"></script>
+  </body>
+</html>
