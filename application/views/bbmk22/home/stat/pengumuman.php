@@ -8,7 +8,7 @@ $afterpage = ($page - 1) * $limit;
 $no = 1 + $afterpage;
 
 $kel_peserta = $kelulusan;
-$jnquery = $this->db->query("SELECT * FROM peserta WHERE tahun =2021 AND kelulusan ='$kel_peserta'");
+$jnquery = $this->db->query("SELECT * FROM peserta WHERE tahun =2022 AND kelulusan ='$kel_peserta'");
 $notif = "Error";
 if ($kel_peserta == 0) {
     $notif = "Belum Lulus";
@@ -22,7 +22,7 @@ if ($kel_peserta == 0) {
 ?>
 
 <?php
-$nquery = $this->db->query("SELECT * FROM peserta WHERE tahun =2021 AND kelulusan ='$kel_peserta' ");
+$nquery = $this->db->query("SELECT * FROM peserta WHERE tahun =2022 AND kelulusan ='$kel_peserta' ");
 ?>
 
 <br />

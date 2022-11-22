@@ -20,7 +20,7 @@ if ($key->foto == null) {
                     );
                     ?>
                     <input type="hidden" name="<?= $csrf['name']; ?>" value="<?= $csrf['hash']; ?>">
-                    <img src="<?= base_url(); ?><?= $foto ?>" alt="" height="200" width="200">
+                    <img src="<?= base_url(); ?><?= $foto ?>" alt="" class="rounded-circle" height="200" width="200">
                     <div class="text-start">
                         <div class="text-center">
                             <p>Ganti Foto Profil</p>

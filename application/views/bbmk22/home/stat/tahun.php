@@ -4,7 +4,7 @@
         <div class="card shadow mb-4" style="background-color:#e6eff6">
             <!-- Card Header - Dropdown -->
             <div class="card-header py-3 d-flex flex-row align-items-center justify-content-between">
-                <h6 class="m-0 font-weight-bold text-primary">Grafik Peserta 2020 dan 2021</h6>
+                <h6 class="m-0 font-weight-bold text-primary">Grafik Peserta 2020, 2021, dan 2022</h6>
             </div>
             <!-- Card Body -->
             <div class="card-body">
@@ -41,6 +41,20 @@
             <div class="card-body">
                 <div class="chart-area">
                     <canvas id="pesertaLulus21"></canvas>
+                </div>
+            </div>
+        </div>
+    </div>
+    <div class="col-xl-6 col-lg-6">
+        <div class="card shadow mb-4" style="background-color:#e6eff6">
+            <!-- Card Header - Dropdown -->
+            <div class="card-header py-3 d-flex flex-row align-items-center justify-content-between">
+                <h6 class="m-0 font-weight-bold text-primary">Grafik Peserta 2022</h6>
+            </div>
+            <!-- Card Body -->
+            <div class="card-body">
+                <div class="chart-area">
+                    <canvas id="pesertaLulus22"></canvas>
                 </div>
             </div>
         </div>
@@ -127,6 +141,35 @@
             </div>
         </div>
     </div>
+    <div class="col-md-6">
+        <div class="card shadow mb-4" style="background-color:#e6eff6">
+            <!-- Card Header - Dropdown -->
+            <div class="card-header py-3 d-flex flex-row align-items-center justify-content-between">
+                <h6 class="m-0 font-weight-bold text-primary">Peserta 2022</h6>
+            </div>
+            <!-- Card Body -->
+            <div class="card-body">
+                <table class="table table-hover">
+                    <thead>
+                        <tr>
+
+                            <th scope="col">Lulus</th>
+                            <th scope="col">Tidak Lulus</th>
+                            <th scope="col">Belum Diisi </th>
+
+                        </tr>
+                    </thead>
+                    <tbody>
+
+                        <td><?= $all_participant->pass22 ?></td>
+                        <td><?= $all_participant->not_pass22 ?></td>
+                        <td><?= $all_participant->npass22 ?></td>
+
+                    </tbody>
+                </table>
+            </div>
+        </div>
+    </div>
 </div>
 
 
@@ -143,7 +186,20 @@
         data: {
             labels: ["Lulus", "Tidak Lulus", "Belum Lulus"],
             datasets: [{
-                label: "Peserta 2020",
+                label: "Peserta 2022",
+                backgroundColor: ["#0C9247", "#0C9247", "#0C9247", "#0C9247", "#0C9247", "#0C9247", "#0C9247", "#0C9247", "#0C9247", "#0C9247", "#0C9247", "#0C9247", "#0C9247", "#0C9247", "#0C9247"],
+                data: [
+                    <?php
+
+                    echo ($all_participant->pass22 . ',');
+                    echo ($all_participant->not_pass22 . ',');
+                    echo ($all_participant->npass22 . ',');
+
+                    ?>
+
+                ]
+            }, {
+                label: "Peserta 2021",
                 backgroundColor: ["#3e95cd", "#3e95cd", "#3e95cd", "#3e95cd", "#3e95cd", "#3e95cd", "#3e95cd", "#3e95cd", "#3e95cd", "#3e95cd", "#3e95cd", "#3e95cd", "#3e95cd", "#3e95cd", "#3e95cd", "#3e95cd", "#3e95cd", "#3e95cd", ],
                 data: [
                     <?php
@@ -156,7 +212,7 @@
 
                 ]
             }, {
-                label: "Peserta 2021",
+                label: "Peserta 2020",
                 backgroundColor: ["#8e5ea2", "#8e5ea2", "#8e5ea2", "#8e5ea2", "#8e5ea2", "#8e5ea2", "#8e5ea2", "#8e5ea2", "#8e5ea2", "#8e5ea2", "#8e5ea2", "#8e5ea2", "#8e5ea2", "#8e5ea2", "#8e5ea2", "#8e5ea2", "#8e5ea2", "#8e5ea2", ],
                 data: [
                     <?php
@@ -181,14 +237,15 @@
     new Chart(document.getElementById("pesertaGraph"), {
         type: 'pie',
         data: {
-            labels: ["Peserta Tahun 2020", "Peserta 2021"],
+            labels: ["Peserta Tahun 2020", "Peserta 2021", "Peserta 2022"],
             datasets: [{
                 label: "Peserta 2021",
-                backgroundColor: ["#3e95cd", 'rgb(255, 205, 86)'],
+                backgroundColor: ["#3e95cd", 'rgb(255, 205, 86)', "#0C9247"],
                 data: [
                     <?php
                     echo ($all_participant->y20 . ',');
-                    echo ($all_participant->y21);
+                    echo ($all_participant->y21 . ',');
+                    echo ($all_participant->y22);
 
                     ?>
                 ]
@@ -233,13 +290,38 @@
         data: {
             labels: ["Peserta Lulus", "Peserta Belum Lulus", "Peserta Tidak lulus"],
             datasets: [{
-                label: "Peserta 2022",
+                label: "Peserta 2021",
                 backgroundColor: ["#3e95cd", "#8e5ea2", "#3cba9f"],
                 data: [
                     <?php
                     echo ($all_participant->pass21 . ',');
                     echo ($all_participant->npass21 . ',');
                     echo ($all_participant->not_pass21 . ',');
+
+                    ?>
+                ]
+            }]
+        },
+        options: {
+            title: {
+                display: true,
+                text: 'Total Participant'
+            }
+        }
+    });
+
+    new Chart(document.getElementById("pesertaLulus22"), {
+        type: 'pie',
+        data: {
+            labels: ["Peserta Lulus", "Peserta Belum Lulus", "Peserta Tidak lulus"],
+            datasets: [{
+                label: "Peserta 2022",
+                backgroundColor: ["#3e95cd", "#8e5ea2", "#3cba9f"],
+                data: [
+                    <?php
+                    echo ($all_participant->pass22 . ',');
+                    echo ($all_participant->npass22 . ',');
+                    echo ($all_participant->not_pass22 . ',');
 
                     ?>
                 ]

@@ -2,7 +2,7 @@
     <div class="container">
         <div class="row justify-content-center">
             <div class="col-md-4 mt-5">
-                <div class="card px-5 py-5 shadow masuk">
+                <div class="card px-5 py-5 masuk">
                     <h2 class="fw-bold text-center">Masuk Akun</h2>
                     <form action="" method="post">
                         <input type="hidden" name="<?= $this->security->get_csrf_token_name(); ?>" value="<?= $this->security->get_csrf_hash(); ?>">
@@ -38,7 +38,7 @@
         </div>
     </div>
 </div>
-</body>
+</body> 
 <?php
 if (isset($_POST["login"])) {
     $username = $this->db->escape_str($this->input->input_stream("username", TRUE));

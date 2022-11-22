@@ -2,7 +2,7 @@
 	<div class="container">
 		<div class="row justify-content-center">
 			<div class="col-md-4 mt-5">
-				<div class="card px-5 py-5 shadow masuk">
+				<div class="card px-5 py-5 masuk">
 					<h2 class="fw-bold text-center">Masuk Akun</h2>
 					<h5 class="fw-bold text-center">superadmin</h5>
 					<form action="" method="post">

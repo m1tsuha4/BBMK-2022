@@ -46,7 +46,7 @@
             <div class="col-md-4 justify-self-center">
                 <div class="card card-style border-0 shadow-lg" style="width: 25rem">
                     <div class="card-body">
-                        <img src="<?= base_url() ?>assets/images/website/bbmk20.png" class="img-fluid" />
+                        <img src="<?= base_url() ?>assets22/img/Konsep2.png" class=" img-fluid" />
                         <h5 class="card-title pt-4"><b>BBMK 2022</b></h5>
                         <a href="<?= base_url() ?>main22/index" class="btn btn-bulat rounded-pill mt-3 mb-2">Lihat Halaman</a>
                     </div>
@@ -188,6 +188,20 @@
                     ?>
                 ],
                 datasets: [{
+                        label: "Peserta Tahun 2022",
+                        backgroundColor: ["#0C9247", "#0C9247", "#0C9247", "#0C9247", "#0C9247", "#0C9247", "#0C9247", "#0C9247", "#0C9247", "#0C9247", "#0C9247", "#0C9247", "#0C9247", "#0C9247", "#0C9247"],
+                        data: [
+                            <?php
+                            $query = $this->db->query("SELECT * FROM fakultas");
+                            $no_ukm = 1;
+                            foreach ($query->result() as $ukm) {
+                                $peserta = $this->db->query("SELECT* FROM peserta WHERE fakultas ='$ukm->id'and tahun=2022");
+                                echo ($peserta->num_rows() . ',');
+                            }
+                            ?>
+
+                        ]
+                    }, {
                         label: "Peserta Tahun 2021",
                         backgroundColor: ["#3e95cd", "#3e95cd", "#3e95cd", "#3e95cd", "#3e95cd", "#3e95cd", "#3e95cd", "#3e95cd", "#3e95cd", "#3e95cd", "#3e95cd", "#3e95cd", "#3e95cd", "#3e95cd", "#3e95cd"],
                         data: [
@@ -222,7 +236,7 @@
             options: {
                 title: {
                     display: true,
-                    text: 'Fakultas Peserta BBMK 2021'
+                    text: 'Fakultas Peserta BBMK 2022'
                 }
             }
         });
@@ -233,7 +247,20 @@
             data: {
                 labels: ["Lulus", "Tidak Lulus", "Belum Lulus"],
                 datasets: [{
-                    label: "Peserta 2020",
+                    label: "Peserta 2022",
+                    backgroundColor: ["#0C9247", "#0C9247", "#0C9247", "#0C9247", "#0C9247", "#0C9247", "#0C9247", "#0C9247", "#0C9247", "#0C9247", "#0C9247", "#0C9247", "#0C9247", "#0C9247", "#0C9247"],
+                    data: [
+                        <?php
+
+                        echo ($all_participant->pass22 . ',');
+                        echo ($all_participant->not_pass22 . ',');
+                        echo ($all_participant->npass22 . ',');
+
+                        ?>
+
+                    ]
+                }, {
+                    label: "Peserta 2021",
                     backgroundColor: ["#3e95cd", "#3e95cd", "#3e95cd", "#3e95cd", "#3e95cd", "#3e95cd", "#3e95cd", "#3e95cd", "#3e95cd", "#3e95cd", "#3e95cd", "#3e95cd", "#3e95cd", "#3e95cd", "#3e95cd", "#3e95cd", "#3e95cd", "#3e95cd", ],
                     data: [
                         <?php
@@ -246,7 +273,7 @@
 
                     ]
                 }, {
-                    label: "Peserta 2021",
+                    label: "Peserta 2020",
                     backgroundColor: ["#8e5ea2", "#8e5ea2", "#8e5ea2", "#8e5ea2", "#8e5ea2", "#8e5ea2", "#8e5ea2", "#8e5ea2", "#8e5ea2", "#8e5ea2", "#8e5ea2", "#8e5ea2", "#8e5ea2", "#8e5ea2", "#8e5ea2", "#8e5ea2", "#8e5ea2", "#8e5ea2", ],
                     data: [
                         <?php
@@ -271,14 +298,15 @@
         new Chart(document.getElementById("pesertaGraph"), {
             type: 'pie',
             data: {
-                labels: ["Peserta Tahun 2020", "Peserta 2021"],
+                labels: ["Peserta Tahun 2020", "Peserta 2021", "Peserta 2022"],
                 datasets: [{
-                    label: "Peserta 2021",
-                    backgroundColor: ["#3e95cd", 'rgb(255, 205, 86)'],
+                    label: "Peserta 2022",
+                    backgroundColor: ["#3e95cd", 'rgb(255, 205, 86)', "#0C9247"],
                     data: [
                         <?php
                         echo ($all_participant->y20 . ',');
-                        echo ($all_participant->y21);
+                        echo ($all_participant->y21 . ',');
+                        echo ($all_participant->y22);
 
                         ?>
                     ]

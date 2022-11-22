@@ -6,9 +6,11 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLASjC" crossorigin="anonymous">
-    <link rel="stylesheet" href="<?= base_url(); ?>assets22/style-dashboard.css">
+    <link rel="stylesheet" href="<?= base_url(); ?>assets22/css/style-dashboard.css">
     <link rel="stylesheet" href="https://unicons.iconscout.com/release/v4.0.0/css/line.css" />
-
+    <link rel="stylesheet" type="text/css" href="<?= base_url(); ?>assets/css/sweetalert2.min.css">
+    <script type="text/javascript" src="<?= base_url(); ?>assets/js/sweetalert2.min.js"></script>
+    <link rel="shortcut icon" href="<?= base_url() ?>assets22/logo/group 432.png">
     <title><?= $title; ?></title>
 </head>
 <?php
@@ -36,6 +38,9 @@ $data = $query->row();
                 </li>
                 <li>
                     <a href="<?= base_url(); ?>admin22/profile"><i class="bi bi-pencil-square me-2"></i>Edit Profil</a>
+                </li>
+                <li>
+                    <a href="<?= base_url(); ?>admin22/setting"><i class="bi bi-pencil-square me-2"></i>Settings</a>
                 </li>
                 <li>
                     <a href="<?= base_url(); ?>admin22/statistik"><i class="bi bi-menu-down me-2"></i>Statistik BBMK</a>

@@ -393,10 +393,10 @@ class Admin22 extends CI_Controller
 
 		if (@$this->session->userdata("adminBBMK19")) {
 			$data["title"] = "Setting UKM | BBMK ";
-			$this->load->view("head", $data);
-			$this->load->view("ukm/template/header");
-			$this->load->view("ukm/pengaturan");
-			$this->load->view("ukm/template/footer");
+			// $this->load->view("head", $data);
+			$this->load->view("bbmk22/ukm/header", $data);
+			$this->load->view("bbmk22/ukm/pengaturan");
+			$this->load->view("bbmk22/ukm/footer");
 		} else {
 			$this->alert->msg("error", "Oops...", "Anda tidak memiliki izin untuk menghapus halaman ini", "1", base_url());
 		}

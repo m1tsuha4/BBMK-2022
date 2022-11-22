@@ -296,49 +296,48 @@ $peserta_22_p = $this->db->query("SELECT* FROM peserta WHERE jk='Perempuan' AND 
         type: 'bar',
         data: {
             labels: ["Lulus", "Tidak Lulus", "Belum Lulus"],
-            datasets: [
+            datasets: [{
+                    label: "Peserta 2022",
+                    backgroundColor: ["#3e95cd", "#8e5ea2", "#3cba9f", "#e8c3b9", "#c45850", "#ffc93c", "#dbf6e9", "#9ddfd3", "#31326f", "#31326f", "#e84545", "#903749", "#53354a", "#f39189", "#bb8082", "#6e7582", "#046582", "#f8f5f1", "#1f441e", "#cee6b4"],
+                    data: [
+                        <?php
+
+                        echo ($jumlah_lulus22 . ',');
+                        echo ($jumlah_tidaklulus22 . ',');
+                        echo ($jumlah_belumlulus22 . ',');
+
+                        ?>
+
+                    ]
+                },
                 {
-                label: "Peserta 2022",
-                backgroundColor: ["#3e95cd", "#8e5ea2", "#3cba9f", "#e8c3b9", "#c45850", "#ffc93c", "#dbf6e9", "#9ddfd3", "#31326f", "#31326f", "#e84545", "#903749", "#53354a", "#f39189", "#bb8082", "#6e7582", "#046582", "#f8f5f1", "#1f441e", "#cee6b4"],
-                data: [
-                    <?php
+                    label: "Peserta 2021",
+                    backgroundColor: ["#3e95cd", "#8e5ea2", "#3cba9f", "#e8c3b9", "#c45850", "#ffc93c", "#dbf6e9", "#9ddfd3", "#31326f", "#31326f", "#e84545", "#903749", "#53354a", "#f39189", "#bb8082", "#6e7582", "#046582", "#f8f5f1", "#1f441e", "#cee6b4"],
+                    data: [
+                        <?php
 
-                    echo ($jumlah_lulus22 . ',');
-                    echo ($jumlah_tidaklulus22 . ',');
-                    echo ($jumlah_belumlulus22 . ',');
+                        echo ($jumlah_lulus21 . ',');
+                        echo ($jumlah_tidaklulus21 . ',');
+                        echo ($jumlah_belumlulus21 . ',');
 
-                    ?>
+                        ?>
 
-                ]
-            },
-                {
-                label: "Peserta 2021",
-                backgroundColor: ["#3e95cd", "#8e5ea2", "#3cba9f", "#e8c3b9", "#c45850", "#ffc93c", "#dbf6e9", "#9ddfd3", "#31326f", "#31326f", "#e84545", "#903749", "#53354a", "#f39189", "#bb8082", "#6e7582", "#046582", "#f8f5f1", "#1f441e", "#cee6b4"],
-                data: [
-                    <?php
+                    ]
+                }, {
+                    label: "Peserta 2020",
+                    backgroundColor: ["#3e95cd", "#8e5ea2", "#3cba9f", "#e8c3b9", "#c45850", "#ffc93c", "#dbf6e9", "#9ddfd3", "#31326f", "#31326f", "#e84545", "#903749", "#53354a", "#f39189", "#bb8082", "#6e7582", "#046582", "#f8f5f1", "#1f441e", "#cee6b4"],
+                    data: [
+                        <?php
 
-                    echo ($jumlah_lulus21 . ',');
-                    echo ($jumlah_tidaklulus21 . ',');
-                    echo ($jumlah_belumlulus21 . ',');
+                        echo ($jumlah_lulus20 . ',');
+                        echo ($jumlah_tidaklulus20 . ',');
+                        echo ($jumlah_belumlulus20 . ',');
 
-                    ?>
+                        ?>
 
-                ]
-            }, {
-                label: "Peserta 2020",
-                backgroundColor: ["#3e95cd", "#8e5ea2", "#3cba9f", "#e8c3b9", "#c45850", "#ffc93c", "#dbf6e9", "#9ddfd3", "#31326f", "#31326f", "#e84545", "#903749", "#53354a", "#f39189", "#bb8082", "#6e7582", "#046582", "#f8f5f1", "#1f441e", "#cee6b4"],
-                data: [
-                    <?php
-
-                    echo ($jumlah_lulus20 . ',');
-                    echo ($jumlah_tidaklulus20 . ',');
-                    echo ($jumlah_belumlulus20 . ',');
-
-                    ?>
-
-                ]
-            }
-        ]
+                    ]
+                }
+            ]
         },
         options: {
             title: {
@@ -446,7 +445,7 @@ $peserta_22_p = $this->db->query("SELECT* FROM peserta WHERE jk='Perempuan' AND 
                         ?>
 
                     ]
-                },{
+                }, {
                     label: "Peserta Tahun 2021",
                     backgroundColor: ["#3e95cd", "#8e5ea2", "#3cba9f", "#e8c3b9", "#c45850", "#ffc93c", "#dbf6e9", "#9ddfd3", "#31326f", "#31326f", "#e84545", "#903749", "#53354a", "#f39189", "#bb8082", "#6e7582", "#046582", "#f8f5f1", "#1f441e", "#cee6b4"],
                     data: [
@@ -498,8 +497,7 @@ $peserta_22_p = $this->db->query("SELECT* FROM peserta WHERE jk='Perempuan' AND 
                 }
                 ?>
             ],
-            datasets: [
-                {
+            datasets: [{
                     label: "Peserta Tahun 2022",
                     backgroundColor: ["#3e95cd", "#8e5ea2", "#3cba9f", "#e8c3b9", "#c45850", "#ffc93c", "#dbf6e9", "#9ddfd3", "#31326f", "#31326f", "#e84545", "#903749", "#53354a", "#f39189", "#bb8082", "#6e7582", "#046582", "#f8f5f1", "#1f441e", "#cee6b4"],
                     data: [
@@ -512,7 +510,7 @@ $peserta_22_p = $this->db->query("SELECT* FROM peserta WHERE jk='Perempuan' AND 
                         }
                         ?>
                     ]
-                },{
+                }, {
                     label: "Peserta Tahun 2020",
                     backgroundColor: ["#3e95cd", "#8e5ea2", "#3cba9f", "#e8c3b9", "#c45850", "#ffc93c", "#dbf6e9", "#9ddfd3", "#31326f", "#31326f", "#e84545", "#903749", "#53354a", "#f39189", "#bb8082", "#6e7582", "#046582", "#f8f5f1", "#1f441e", "#cee6b4"],
                     data: [
@@ -564,8 +562,7 @@ $peserta_22_p = $this->db->query("SELECT* FROM peserta WHERE jk='Perempuan' AND 
                 }
                 ?>
             ],
-            datasets: [
-                {
+            datasets: [{
                     label: "Peserta Tahun 2022",
                     backgroundColor: ["#3e95cd", "#8e5ea2", "#3cba9f", "#e8c3b9", "#c45850", "#ffc93c", "#dbf6e9", "#9ddfd3", "#31326f", "#31326f", "#e84545", "#903749", "#53354a", "#f39189", "#bb8082", "#6e7582", "#046582", "#f8f5f1", "#1f441e", "#cee6b4"],
                     data: [
@@ -578,7 +575,7 @@ $peserta_22_p = $this->db->query("SELECT* FROM peserta WHERE jk='Perempuan' AND 
                         }
                         ?>
                     ]
-                },{
+                }, {
                     label: "Peserta Tahun 2020",
                     backgroundColor: ["#3e95cd", "#8e5ea2", "#3cba9f", "#e8c3b9", "#c45850", "#ffc93c", "#dbf6e9", "#9ddfd3", "#31326f", "#31326f", "#e84545", "#903749", "#53354a", "#f39189", "#bb8082", "#6e7582", "#046582", "#f8f5f1", "#1f441e", "#cee6b4"],
                     data: [
@@ -629,8 +626,7 @@ $peserta_22_p = $this->db->query("SELECT* FROM peserta WHERE jk='Perempuan' AND 
                 }
                 ?>
             ],
-            datasets: [
-                {
+            datasets: [{
                     label: "Peserta Tahun 2022",
                     backgroundColor: ["#3e95cd", "#8e5ea2", "#3cba9f", "#e8c3b9", "#c45850", "#ffc93c", "#dbf6e9", "#9ddfd3", "#31326f", "#31326f", "#e84545", "#903749", "#53354a", "#f39189", "#bb8082", "#6e7582", "#046582", "#f8f5f1", "#1f441e", "#cee6b4"],
                     data: [
@@ -643,7 +639,7 @@ $peserta_22_p = $this->db->query("SELECT* FROM peserta WHERE jk='Perempuan' AND 
                         }
                         ?>
                     ]
-                },{
+                }, {
                     label: "Peserta Tahun 2020",
                     backgroundColor: ["#3e95cd", "#8e5ea2", "#3cba9f", "#e8c3b9", "#c45850", "#ffc93c", "#dbf6e9", "#9ddfd3", "#31326f", "#31326f", "#e84545", "#903749", "#53354a", "#f39189", "#bb8082", "#6e7582", "#046582", "#f8f5f1", "#1f441e", "#cee6b4"],
                     data: [
@@ -695,7 +691,7 @@ $peserta_22_p = $this->db->query("SELECT* FROM peserta WHERE jk='Perempuan' AND 
                         echo ($peserta_22_p . ',');
                         ?>
                     ]
-                },{
+                }, {
                     label: "Peserta 2021",
                     backgroundColor: ["#3e95cd", "#3e95cd", "#3e95cd"],
                     data: [

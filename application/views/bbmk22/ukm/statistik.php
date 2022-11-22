@@ -289,7 +289,7 @@ $jumlah_belumlulus = $this->db->query("SELECT* FROM peserta WHERE id_ukm = '$ss'
             options: {
                 title: {
                     display: true,
-                    text: 'Verifikasi Peserta BBMK 2021'
+                    text: 'Verifikasi Peserta BBMK 2022'
                 }
             }
         });

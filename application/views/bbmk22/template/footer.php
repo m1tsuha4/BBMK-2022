@@ -3,13 +3,12 @@
         <div class="row justify-content-around">
             <div class="col-md-4">
                 <div class="d-flex name-footer">
-                    <h2 class="text-footer">BBMK</h2>
-                    <img src="<?= base_url() ?>assets22/Group 351.png" alt="" width="200" height="200" class="ms-3 img-footer">
+                    <img src="<?= base_url() ?>assets22/logo/logobbmk22.png" alt="" width="548.88px" height="188px" class="ms-3 img-footer">
                 </div>
             </div>
             <div class="col-md-4 kolaborasi">
                 <h5>Berkolaborasi Bersama</h5>
-                <p>
+                <p class="logoFooter">
                     <img src="<?= base_url(); ?>assets22/NEO PNG 2.png" alt="" width="10%">
                     <img src="<?= base_url(); ?>assets22/PHP PNG 1.png" alt="" width="10%">
                     <img src="<?= base_url(); ?>assets22/UKS PNG 1.png" alt="" width="10%">
@@ -32,8 +31,16 @@
                 </p>
             </div>
         </div>
-    </div>
+             
+    
 </div>
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/js/bootstrap.bundle.min.js" integrity="sha384-MrcW6ZMFYlzcLA8Nl+NtUVF0sA7MsXsP1UyJoMp4YLEuNSfAP+JcXn/tWtIaxVXM" crossorigin="anonymous"></script>
+<script src="https://anijs.github.io/lib/anijs/anijs-min.js"></script>
+
+<!-- Include to use $addClass, $toggleClass or $removeClass -->
+<script src="https://anijs.github.io/lib/anijs/helpers/dom/anijs-helper-dom-min.js"></script>
+<!-- The scrollreveal helper -->
+<script src="https://anijs.github.io/lib/anijs/helpers/scrollreveal/anijs-helper-scrollreveal-min.js"></script>
 </body>
 
 </html>

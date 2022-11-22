@@ -16,6 +16,7 @@ class main22 extends CI_Controller
 		$this->load->view("bbmk22/template/header", $data);
 		$this->load->view("bbmk22/home/index", $data);
 		$this->load->view("bbmk22/template/footer", $data);
+		$this->load->view("bbmk22/home/footer");
 	}
 
 
@@ -26,6 +27,7 @@ class main22 extends CI_Controller
 		$this->load->view("bbmk22/template/header", $data);
 		$this->load->view("bbmk22/template/ukm", $data);
 		$this->load->view("bbmk22/template/footer", $data);
+		$this->load->view("bbmk22/home/footer", $data);
 	}
 
 	public function login()
@@ -33,7 +35,7 @@ class main22 extends CI_Controller
 		if (@$this->session->userdata("userBBMK")) {
 			$this->alert->msg("success", "Anda sudah login...", "", 1, base_url("/main22/home"));
 		} else {
-			$data["title"] = "BBMK 2022";
+			$data["title"] = "BBMK Online 2022";
 			$this->load->view("bbmk22/template/header", $data);
 			$this->load->view("bbmk22/home/login",);
 			$this->load->view("bbmk22/home/footer");
@@ -126,8 +128,8 @@ class main22 extends CI_Controller
 			case "ukm":
 				$data_ukm = $this->Participant->get_ukm_data($kelulusan)->row();
 				$data["ukm"] = $data_ukm;
-				$data["facultys"] =  $this->Participant->join_faculty_participant(2021);
-				$data["ukm_faculty"] =  $this->Participant->join_faculty_ukm(2021, $data_ukm->id);
+				$data["facultys"] =  $this->Participant->join_faculty_participant(2022);
+				$data["ukm_faculty"] =  $this->Participant->join_faculty_ukm(2022, $data_ukm->id);
 				$data["ukm_faculty2"] =  $this->Participant->join_faculty_ukm2($data_ukm->id);
 				$data["major"] = $this->Participant->join_major($data_ukm->id);
 				// Data 2022               
@@ -184,7 +186,7 @@ class main22 extends CI_Controller
 		$data["kelulusan"] = $kelulusan;
 		$data["page"] = $index;
 		$this->load->view("bbmk22/template/header", $data);
-		$this->load->view("bbmk22/home/stat/header",);
+		$this->load->view("bbmk22/home/stat/header");
 		$this->load->view("bbmk22/home/stat/$page", $data);
 		$this->load->view("bbmk22/template/footer");
 	}
