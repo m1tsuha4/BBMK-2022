@@ -1,4 +1,3 @@
-
 <?php
 $query = $this->db->query("SELECT * FROM peserta WHERE nobp = '" . $this->session->userdata("userBBMK19") . "'");
 $key = $query->row();
@@ -48,7 +47,7 @@ $key = $query->row();
                 ?>
 
                     <tr>
-                        
+
                         <th scope="row"><?= $no ?></th>
                         <td><?= $key->nobp ?></td>
                         <td><?= $key->nama ?></td>

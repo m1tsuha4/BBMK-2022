@@ -27,6 +27,24 @@
                     } ?>
                 </li>
                 <li class="list-group-item">
+                    <form action="" method="post" onsubmit="return confirm('Reset kuota UKM ini ?')">
+                        <?php
+                        $xss = array(
+                            "name" => $this->security->get_csrf_token_name(),
+                            "hash" => $this->security->get_csrf_hash()
+                        ); ?>
+                        <input type="hidden" name="<?= $xss['name']; ?>" value="<?= $xss['hash']; ?>">
+                        <input type="hidden" name="id" value="<?= $data->id; ?>">
+                        <input type="submit" name="kuota" class="btn btn-danger" value="Reset Kuota">
+                    </form>
+                    <?php
+                    if (@$reset_kuota == "gagal") {
+                        $this->alert->pesan("error", "Gagal mereset kuota");
+                    } else if (@$reset_kuota == "berhasil") {
+                        $this->alert->pesan("success", "Berhasil", "Kuota berhasil direset");
+                    } ?>
+                </li>
+                <li class="list-group-item">
                     <form action="" method="post">
                         <?php
                         $csrf = array(

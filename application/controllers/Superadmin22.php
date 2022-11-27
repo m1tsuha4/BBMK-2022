@@ -228,6 +228,16 @@ class Superadmin22 extends CI_Controller
                 $data["reset"] = "gagal";
             }
         }
+        if (isset($_POST["kuota"])){
+            $i = $this->db->escape_str($this->input->input_stream("id", TRUE));
+            $reset_kuota = $this->db->query("UPDATE ukm SET total = '0' WHERE id ='$i'");
+            if ($reset_kuota){
+                $data["kuota"] = "berhasil";
+            }   else {
+                    $data["kuota"] = "gagal";
+                }
+            
+        }
 
         if (isset($_POST["edit"])) {
             $nama = $this->db->escape_str($this->input->input_stream("nama", TRUE));
