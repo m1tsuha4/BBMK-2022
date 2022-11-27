@@ -9,8 +9,7 @@
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.10.0/font/bootstrap-icons.css">
     <link rel="stylesheet" href="http://anijs.github.io/lib/anicollection/anicollection.css" />
     <link rel="stylesheet" href="<?= base_url() ?>assets22/css/style.css">
-    <!-- <link rel="stylesheet" href="<?= base_url() ?>assets22/style2.css"> -->
-    <link rel="shortcut icon" href="<?= base_url() ?>assets22/logo/group 432.png">
+    <link rel="icon" href="<?= base_url() ?>assets22/logo/group 432.png">
     <title><?= $title ?></title>
     <style>
         .title {
